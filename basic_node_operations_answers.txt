@@ -1,0 +1,14 @@
+EXERCISES
+
+1. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+  sort - the output was every line of commands.js in alphabetical order. It splits the data at line break points then compares the first letter (line[0]) of each line using a sorting algorithm and prints it out in that order.
+
+  wc - the output was 36 75 786 (the number of lines, words, and characters in commands.js). It would have to split the data on page breaks and spaces then count the length of each array. It would also return the length of the string for the character count.
+
+  uniq - the output was every line of commands.js because none of the lines repeat the one above it. It would split the data on line breaks then run through the array, comparing sequential lines, and skipping over the second one if they were the same.
+
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+
+  I did `uniq commands.js | wc`, and it returned 36 75 786, just like when wc is run normally, but in the case that commands.js did have a line repeat the one above it, wc would have returned lesser values in all of them because it would only be counting the unique lines that uniq returned.
